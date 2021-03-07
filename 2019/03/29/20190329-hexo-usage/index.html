@@ -347,24 +347,29 @@ deploy:
     repo: git@github.com:BoView/BoView.github.io.git <span class="token comment" spellcheck="true">#换成自己的用户名和仓库名</span>
     branch: master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="Hexo-常用指令"><a href="#Hexo-常用指令" class="headerlink" title="Hexo 常用指令"></a>Hexo 常用指令</h4><ul>
-<li><p>新建博客项目，默认为指定的folder文件夹;<br>hexo init [folder]</p>
+<li>新建博客项目，默认为指定的folder文件夹;<pre class="line-numbers language-bash"><code class="language-bash">hexo init <span class="token punctuation">[</span>folder<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
-<li><p>新建文章，总共有post、draft、page三种layout，文章以你指定的title名创建，title中如果有空格请使用“”括起来;<br>hexo new [layout] “title”</p>
+<li>新建文章，总共有post、draft、page三种layout，文章以你指定的title名创建，title中如果有空格请使用“”括起来;<pre class="line-numbers language-bash"><code class="language-bash">hexo new <span class="token punctuation">[</span>layout<span class="token punctuation">]</span> <span class="token string">"title"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
-<li><p>生成静态文件，下面的代码为简写，可以添加-w参数监视文件的变动;<br>hexo generate<br>hexo g</p>
+<li>生成静态文件，下面的代码为简写，可以添加-w参数监视文件的变动;<pre class="line-numbers language-bash"><code class="language-bash">hexo generate
+hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
-<li><p>启动本地服务器，可以添加参数-p指定服务器的端口，默认在端口4000<br>hexo server<br>hexo s</p>
+<li>启动本地服务器，可以添加参数-p指定服务器的端口，默认在端口4000<pre class="line-numbers language-bash"><code class="language-bash">hexo server
+hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
-<li><p>博客项目部署<br>hexo deploy<br>hexo d</p>
+<li>博客项目部署<pre class="line-numbers language-bash"><code class="language-bash">hexo deploy
+hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
-<li><p>一键静态文件生成与部署<br>hexo g -d<br>hexo d -g</p>
+<li>一键静态文件生成与部署<pre class="line-numbers language-bash"><code class="language-bash">hexo g -d
+hexo d -g<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
-<li><p>清楚缓存和生成的静态文件，对应于db.json和public目录下的文件<br>hexo clean<br>hexo cl</p>
+<li>清楚缓存和生成的静态文件，对应于db.json和public目录下的文件<pre class="line-numbers language-bash"><code class="language-bash">hexo clean
+hexo cl<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
-<li><p>列出博客文件树<br>hexo list route</p>
-</li>
+<li>列出博客文件树<pre class="line-numbers language-bash"><code class="language-bash">hexo list route<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="绑定域名（阿里云上申请的域名，解析到服务器）"><a href="#绑定域名（阿里云上申请的域名，解析到服务器）" class="headerlink" title="绑定域名（阿里云上申请的域名，解析到服务器）"></a>绑定域名（阿里云上申请的域名，解析到服务器）</h4></li>
 </ul>
-<h4 id="绑定域名（阿里云上申请的域名，解析到服务器）"><a href="#绑定域名（阿里云上申请的域名，解析到服务器）" class="headerlink" title="绑定域名（阿里云上申请的域名，解析到服务器）"></a>绑定域名（阿里云上申请的域名，解析到服务器）</h4><p>添加三条解析：<br>前两条选择A记录类型，主机记录设置为@，线路选择默认，TTL选择600，记录值分别为192.30.252.153、192.30.252.154；<br>后一条选择CNAME记录类型，主机记录设置为www，线路选择默认，TTL选择600，记录值为github的仓库名boview.github.io。</p>
+<p>添加三条解析：<br>前两条选择A记录类型，主机记录设置为@，线路选择默认，TTL选择600，记录值分别为192.30.252.153、192.30.252.154；<br>后一条选择CNAME记录类型，主机记录设置为www，线路选择默认，TTL选择600，记录值为github的仓库名boview.github.io。</p>
 <p>在hexo里配置CNAME</p>
 <pre class="line-numbers language-bash"><code class="language-bash">vim /opt/blog/source/CNAME<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre class="line-numbers language-bash"><code class="language-bash">www.sunlinbo.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -628,19 +633,24 @@ margin-bottom: 60px<span class="token punctuation">;</span>
 padding: 25px<span class="token punctuation">;</span>
 -webkit-box-shadow: 0 0 5px rgba<span class="token punctuation">(</span>202, 203, 203, .5<span class="token punctuation">)</span><span class="token punctuation">;</span>
 -moz-box-shadow: 0 0 5px rgba<span class="token punctuation">(</span>202, 203, 204, .5<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-​```i<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
-<li><p>添加背景图片<br>修改themes\next\source\css\ _custom\custom.styl文件，这个是Next故意留给用户自己个性化定制一些样式的文件，添加以下代码：<br>​```bash<br>body {<br>background:url(<a target="_blank" rel="noopener" href="https://source.unsplash.com/random/1600x900">https://source.unsplash.com/random/1600x900</a>);<br>background-repeat: no-repeat;<br>background-attachment:fixed;<br>background-position:50% 50%;<br>}</p>
-<pre><code>如果按照上一步添加完图片之后，发现出现了另外一个大问题，整个博客背景都是透明的，只能看见图片，看不清文章文字，这样绝对不行的，办法如下，照例在上面的文件下面继续追加如下代码：
-```bash
-.main-inner {
-margin-top: 60px;
-padding: 60px 60px 60px 60px;
-background: #fff;
-min-height: 500px;
-}</code></pre></li>
+<li><p>添加背景图片<br>修改themes\next\source\css\ _custom\custom.styl文件，这个是Next故意留给用户自己个性化定制一些样式的文件，添加以下代码：</p>
+</li>
 </ol>
+<pre class="line-numbers language-bash"><code class="language-bash">body <span class="token punctuation">{</span>
+    background:url<span class="token punctuation">(</span>https://source.unsplash.com/random/1600x900<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    background-repeat: no-repeat<span class="token punctuation">;</span>
+    background-attachment:fixed<span class="token punctuation">;</span>
+    background-position:50% 50%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果按照上一步添加完图片之后，发现出现了另外一个大问题，整个博客背景都是透明的，只能看见图片，看不清文章文字，这样绝对不行的，办法如下，照例在上面的文件下面继续追加如下代码：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">.main-inner <span class="token punctuation">{</span>
+    margin-top: 60px<span class="token punctuation">;</span>
+    padding: 60px 60px 60px 60px<span class="token punctuation">;</span>
+    background: <span class="token comment" spellcheck="true">#fff;</span>
+    min-height: 500px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
